@@ -60,7 +60,7 @@ sys.setdefaultencoding('utf-8')
 
 helpMessage ="""Thailand : SELFBOT_MAN_PC
 
- ╭═════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
+ ╭════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
  ║ ♨️ SELFBOT_MAN_PC_HELP ♨️
  ║͜͡☆➣ คำสั่ง「Selfbot. Man」
  ║͜͡☆➣ คำสั่ง「Creator. Man」
@@ -81,7 +81,7 @@ http://line.me/ti/p/~1ove..neverdie
 """
 
 creatorMessage ="""HELP_creator
- ╭═════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
+ ╭════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
  ║ ♨️ SELFBOT_MAN_PC_HELP ♨️
  ╰══════════╬♠️╬══════════╯
  ╭══════════╬♥╬══════════╮
@@ -105,7 +105,7 @@ creatorMessage ="""HELP_creator
 """
 
 setMessage ="""HELP_settings
- ╭═════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
+ ╭════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
  ║ ♨️ SELFBOT_MAN_PC_HELP ♨️
  ╰══════════╬♠️╬══════════╯
  ╭══════════╬♥╬══════════╮
@@ -128,7 +128,7 @@ setMessage ="""HELP_settings
 """
 
 publikMessage ="""HELP_selfbot
- ╭═════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
+ ╭════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
  ║ ♨️ SELFBOT_MAN_PC_HELP ♨️
  ╰══════════╬♠️╬══════════╯
  ╭══════════╬♥╬══════════╮
@@ -144,7 +144,7 @@ publikMessage ="""HELP_selfbot
 """
 
 mediaMessage ="""HELP_media
- ╭═════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
+ ╭════════╬[ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅]╬═════════╮
  ║ ♨️ SELFBOT_MAN_PC_HELP ♨️
  ╰══════════╬♠️╬══════════╯
  ╭══════════╬♥╬══════════╮
@@ -743,7 +743,7 @@ def bot(op):
             ginfo = ka.getGroup(op.param1)
             contact = ka.getContact(op.param2)
             image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-            ka.sendText(op.param1,"Hallo " + ka.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\nBudayakan Cek Note\nDan Semoga Betah Disini ^_^")
+            ka.sendText(op.param1,"Hello ↪️" + ka.getContact(op.param2).displayName + "↩️\nWelcome To 🔛 " + str(ginfo.name) + " " + "\nby SELFBOT_MAN_PROTECT")
             c = Message(to=op.param1, from_=None, text=None, contentType=13)
             c.contentMetadata={'mid':op.param2}
             ka.sendMessage(c)  
@@ -837,6 +837,16 @@ def bot(op):
                   time.sleep(0.00001)
                   ke.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
                   kc.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
                   G = kc.getGroup(op.param1)
@@ -858,6 +868,16 @@ def bot(op):
                   kb.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
                   ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
                   kd.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
@@ -881,6 +901,16 @@ def bot(op):
                   time.sleep(0.00001)
                   kc.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
                   ke.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
                   G = ke.getGroup(op.param1)
@@ -890,11 +920,11 @@ def bot(op):
 #==============================================================================#
             elif op.param3 in Dmid:
               if op.param2 not in Bots or owner:
-                  G = ka.getGroup(op.param1)
-                  ka.kickoutFromGroup(op.param1,[op.param2])
+                  G = kf.getGroup(op.param1)
+                  kf.kickoutFromGroup(op.param1,[op.param2])
                   G.preventJoinByTicket = False
-                  ka.updateGroup(G)
-                  Ticket = ka.reissueGroupTicket(op.param1)
+                  kf.updateGroup(G)
+                  Ticket = kf.reissueGroupTicket(op.param1)
                   ke.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
                   kb.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -905,11 +935,213 @@ def bot(op):
                   time.sleep(0.00001)
                   ka.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  G = kf.getGroup(op.param1)
+                  G.preventJoinByTicket = True
+                  kf.updateGroup(G)
+                  wait["blacklist"][op.param2] = True
+#==============================================================================#
+            elif op.param3 in Emid:
+              if op.param2 not in Bots or owner:
+                  G = kg.getGroup(op.param1)
+                  kd.kickoutFromGroup(op.param1,[op.param2])
+                  G.preventJoinByTicket = False
+                  kg.updateGroup(G)
+                  Ticket = kg.reissueGroupTicket(op.param1)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  G = kg.getGroup(op.param1)
+                  G.preventJoinByTicket = True
+                  kg.updateGroup(G)
+                  wait["blacklist"][op.param2] = True
+#==============================================================================#
+            elif op.param3 in Fmid:
+              if op.param2 not in Bots or owner:
+                  G = kh.getGroup(op.param1)
+                  kh.kickoutFromGroup(op.param1,[op.param2])
+                  G.preventJoinByTicket = False
+                  kh.updateGroup(G)
+                  Ticket = kh.reissueGroupTicket(op.param1)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  G = kh.getGroup(op.param1)
+                  G.preventJoinByTicket = True
+                  kh.updateGroup(G)
+                  wait["blacklist"][op.param2] = True
+#==============================================================================#
+            elif op.param3 in Gmid:
+              if op.param2 not in Bots or owner:
+                  G = ki.getGroup(op.param1)
+                  ki.kickoutFromGroup(op.param1,[op.param2])
+                  G.preventJoinByTicket = False
+                  ki.updateGroup(G)
+                  Ticket = ki.reissueGroupTicket(op.param1)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  G = ki.getGroup(op.param1)
+                  G.preventJoinByTicket = True
+                  ki.updateGroup(G)
+                  wait["blacklist"][op.param2] = True
+#==============================================================================#
+            elif op.param3 in Hmid:
+              if op.param2 not in Bots or owner:
+                  G = kj.getGroup(op.param1)
+                  kj.kickoutFromGroup(op.param1,[op.param2])
+                  G.preventJoinByTicket = False
+                  kj.updateGroup(G)
+                  Ticket = kj.reissueGroupTicket(op.param1)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  G = kj.getGroup(op.param1)
+                  G.preventJoinByTicket = True
+                  kj.updateGroup(G)
+                  wait["blacklist"][op.param2] = True
+#==============================================================================#
+            elif op.param3 in Imid:
+              if op.param2 not in Bots or owner:
+                  G = kb.getGroup(op.param1)
+                  kb.kickoutFromGroup(op.param1,[op.param2])
+                  G.preventJoinByTicket = False
+                  kb.updateGroup(G)
+                  Ticket = kb.reissueGroupTicket(op.param1)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  G = kb.getGroup(op.param1)
+                  G.preventJoinByTicket = True
+                  kb.updateGroup(G)
+                  wait["blacklist"][op.param2] = True
+#==============================================================================#
+            elif op.param3 in Jmid:
+              if op.param2 not in Bots or owner:
+                  G = ka.getGroup(op.param1)
+                  ka.kickoutFromGroup(op.param1,[op.param2])
+                  G.preventJoinByTicket = False
+                  ka.updateGroup(G)
+                  Ticket = ka.reissueGroupTicket(op.param1)
+                  kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
                   G = ka.getGroup(op.param1)
                   G.preventJoinByTicket = True
                   ka.updateGroup(G)
                   wait["blacklist"][op.param2] = True
-#==============================================================================#
+#===============================================================================#
         if op.type == 19: #admin
           if op.param2 in Bots:
             pass
