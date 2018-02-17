@@ -30,11 +30,31 @@ ke = LINETCR.LINE()
 ke.login(token='MAN')
 ke.loginResult()
 
+kf = LINETCR.LINE()
+kf.login(token='MAN')
+kf.loginResult()
+
+kg = LINETCR.LINE()
+kg.login(token='MAN')
+kg.loginResult()
+
+kh = LINETCR.LINE()
+kh.login(token='MAN')
+kh.loginResult()
+
+ki = LINETCR.LINE()
+ki.login(token='MAN')
+ki.loginResult()
+
+kj = LINETCR.LINE()
+kj.login(token='MAN')
+kj.loginResult()
+
 backup = LINETCR.LINE()
 backup.login(token='man')
 backup.loginResult()
 
-print "Login SELFBOT_MAN_PC"
+print "Login SELFBOT_MAN_PROTECT"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -151,14 +171,19 @@ mediaMessage ="""HELP_media
  ╰══════════╬💀╬══════════╯
 """
 
-KAC = [ka,kb,kc,kd,ke]
+KAC = [ka,kb,kc,kd,ke,kf,kg,kh,ki,kj]
 mid = ka.getProfile().mid
 Amid = kb.getProfile().mid
 Bmid = kc.getProfile().mid
 Cmid = kd.getProfile().mid
 Dmid = ke.getProfile().mid
-Emid = backup.getProfile().mid
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid]
+Emid = kf.getProfile().mid
+Fmid = kg.getProfile().mid
+Gmid = kh.getProfile().mid
+Hmid = ki.getProfile().mid
+Imid = kj.getProfile().mid
+Jmid = backup.getProfile().mid
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid]
 owner=["SELFBOT_MAN_PC"]
 admin=["ud24af63fd62d14c3bf8f719df80c3745"]
 
@@ -191,17 +216,52 @@ backup5 = ke.getProfile()
 backup5.displayName = contact.displayName
 backup5.statusMessage = contact.statusMessage                        
 backup5.pictureStatus = contact.pictureStatus
+
+contact = kf.getProfile()
+backup6 = kf.getProfile()
+backup6.displayName = contact.displayName
+backup6.statusMessage = contact.statusMessage                        
+backup6.pictureStatus = contact.pictureStatus
+
+contact = kg.getProfile()
+backup7 = kg.getProfile()
+backup7.displayName = contact.displayName
+backup7.statusMessage = contact.statusMessage                        
+backup7.pictureStatus = contact.pictureStatus
+
+contact = kh.getProfile()
+backup8 = kh.getProfile()
+backup8.displayName = contact.displayName
+backup8.statusMessage = contact.statusMessage                        
+backup8.pictureStatus = contact.pictureStatus
+
+contact = ki.getProfile()
+backup9 = ki.getProfile()
+backup9.displayName = contact.displayName
+backup9.statusMessage = contact.statusMessage                        
+backup9.pictureStatus = contact.pictureStatus
+
+contact = kj.getProfile()
+backup10 = kj.getProfile()
+backup10.displayName = contact.displayName
+backup10.statusMessage = contact.statusMessage                        
+backup10.pictureStatus = contact.pictureStatus
 #===========================================#
 responsename = ka.getProfile().displayName
 responsename2 = kb.getProfile().displayName
 responsename3 = kc.getProfile().displayName
 responsename4 = kd.getProfile().displayName
 responsename5 = ke.getProfile().displayName
+responsename6 = kf.getProfile().displayName
+responsename7 = kg.getProfile().displayName
+responsename8 = kh.getProfile().displayName
+responsename9 = ki.getProfile().displayName
+responsename10 = kj.getProfile().displayName
 
 wait = {
     "contact":False,
     "Bot":{},
-    "autoJoin":False,
+    "autoJoin":True,
     "autoCancel":{"on":True,"members":1},
     "leaveRoom":True,
     "timeline":True,
@@ -531,6 +591,11 @@ def bot(op):
                 kc.acceptGroupInvitationByTicket(op.param1,Ticket)
                 kd.acceptGroupInvitationByTicket(op.param1,Ticket)
                 ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kj.acceptGroupInvitationByTicket(op.param1,Ticket)
                 G.preventJoinByTicket = True
                 ka.updateGroup(G)
               else:
@@ -569,6 +634,60 @@ def bot(op):
                 ke.acceptGroupInvitation(op.param1)
               else:
                 ke.rejectGroupInvitation(op.param1)
+            else:
+              print "autoJoin is Off"
+
+          if Emid in op.param3:
+            if wait["autoJoin"] == True:
+              if op.param2 in owner:
+                kf.acceptGroupInvitation(op.param1)
+              else:
+                kf.rejectGroupInvitation(op.param1)
+            else:
+              print "autoJoin is Off"
+                
+          if Fmid in op.param3:
+            if wait["autoJoin"] == True:
+              if op.param2 in owner:
+                kg.acceptGroupInvitation(op.param1)
+              else:
+                kg.rejectGroupInvitation(op.param1)
+            else:
+              print "autoJoin is Off"
+                
+          if Gmid in op.param3:
+            if wait["autoJoin"] == True:
+              if op.param2 in owner:
+                kh.acceptGroupInvitation(op.param1)
+              else:
+                kh.rejectGroupInvitation(op.param1)
+            else:
+              print "autoJoin is Off"
+                
+          if Hmid in op.param3:
+            if wait["autoJoin"] == True:
+              if op.param2 in owner:
+                ki.acceptGroupInvitation(op.param1)
+              else:
+                ki.rejectGroupInvitation(op.param1)
+            else:
+              print "autoJoin is Off"
+
+          if Imid in op.param3:
+            if wait["autoJoin"] == True:
+              if op.param2 in owner:
+                kj.acceptGroupInvitation(op.param1)
+              else:
+                kj.rejectGroupInvitation(op.param1)
+            else:
+              print "autoJoin is Off"
+                
+          if Jmid in op.param3:
+            if wait["autoJoin"] == True:
+              if op.param2 in owner:
+                ka.acceptGroupInvitation(op.param1)
+              else:
+                ka.rejectGroupInvitation(op.param1)
             else:
               print "autoJoin is Off"
 #==============================================================================#
@@ -664,10 +783,10 @@ def bot(op):
           else:
             if op.param3 in mid:
               if op.param2 not in Bots or owner:
-                  G = ke.getGroup(op.param1)
+                  G = kj.getGroup(op.param1)
                   G.preventJoinByTicket = False
-                  ke.updateGroup(G)
-                  Ticket = ke.reissueGroupTicket(op.param1)
+                  kj.updateGroup(G)
+                  Ticket = kj.reissueGroupTicket(op.param1)
                   backup.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
                   backup.kickoutFromGroup(op.param1,[op.param2])
@@ -685,9 +804,19 @@ def bot(op):
                   time.sleep(0.00001)
                   ke.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
-                  G = ke.getGroup(op.param1)
+                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kh.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  kj.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  time.sleep(0.00001)
+                  G = kj.getGroup(op.param1)
                   G.preventJoinByTicket = True
-                  ke.updateGroup(G)
+                  kj.updateGroup(G)
                   backup.leaveGroup(op.param1)
                   wait["blacklist"][op.param2] = True
                   f=codecs.open('st2__b.json','w','utf-8')
