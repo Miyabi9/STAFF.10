@@ -953,8 +953,8 @@ def bot(op):
             elif op.param3 in Emid:
               if op.param2 not in Bots or owner:
                   G = kg.getGroup(op.param1)
-                  kd.kickoutFromGroup(op.param1,[op.param2])
-                  G.preventJoinByTicket = False
+                  kg.kickoutFromGroup(op.param1,[op.param2])
+                  G.reventJoinByTicket = False
                   kg.updateGroup(G)
                   Ticket = kg.reissueGroupTicket(op.param1)
                   kf.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -967,9 +967,9 @@ def bot(op):
                   time.sleep(0.00001)
                   kj.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
-                  kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  kd.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
-                  kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                  kc.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
                   kh.acceptGroupInvitationByTicket(op.param1,Ticket)
                   time.sleep(0.00001)
@@ -1164,11 +1164,21 @@ def bot(op):
                       kc.kickoutFromGroup(op.param1,[op.param2])
                       kd.kickoutFromGroup(op.param1,[op.param2])
                       ke.kickoutFromGroup(op.param1,[op.param2])
+                      kf.kickoutFromGroup(op.param1,[op.param2])
+                      kg.kickoutFromGroup(op.param1,[op.param2])
+                      kh.kickoutFromGroup(op.param1,[op.param2])
+                      ki.kickoutFromGroup(op.param1,[op.param2])
+                      kj.kickoutFromGroup(op.param1,[op.param2])
                       ka.inviteIntoGroup(op.param1,[op.param3])
                       kb.inviteIntoGroup(op.param1,[op.param3])
                       kc.inviteIntoGroup(op.param1,[op.param3])
                       kd.inviteIntoGroup(op.param1,[op.param3])
                       ke.inviteIntoGroup(op.param1,[op.param3])
+                      kf.inviteIntoGroup(op.param1,[op.param3])
+                      kg.inviteIntoGroup(op.param1,[op.param3])
+                      kh.inviteIntoGroup(op.param1,[op.param3])
+                      ki.inviteIntoGroup(op.param1,[op.param3])
+                      kj.inviteIntoGroup(op.param1,[op.param3])
                       wait["blacklist"][op.param2] = True
                     except:
                       random.choice(KAC).getGroup(op.param1)
@@ -1213,7 +1223,7 @@ def bot(op):
             msg = Message(to=op.param1, from_=None, text=None, contentType=13)
             msg.contentMetadata={'mid':op.param2}
             ka.sendMessage(msg)
-            ka.sendText(op.param1,ka.getContact(op.param2).displayName + " Kickers")
+            ka.sendText(op.param1,ka.getContact(op.param2).displayName + " Kick 👀")
 #==============================================================================#
         if op.type == 11:
           if op.param2 in Bots:
@@ -1236,7 +1246,7 @@ def bot(op):
                         data = json.loads(data)
                         if data['status'] == 200:
                             if data['result']['result'] == 100:
-                                ka.sendText(msg.to, "[One Piece Chat] " + "\n" + data['result']['response'].encode('utf-8'))
+                                ka.sendText(msg.to, "「MAN-auto-Chat」⤵️" + "\n" + data['result']['response'].encode('utf-8'))
 #==============================================================================#
         if op.type == 32:
           if wait["Protectcancel"] == True:
@@ -1246,7 +1256,7 @@ def bot(op):
               elif op.param2 in admin:
                 pass
               else:
-                random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + " Canceled Invitation")
+                random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + " Canceled Invitation 👀")
                 random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                 random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
                 wait["blacklist"][op.param2] = True
@@ -1373,7 +1383,7 @@ def bot(op):
             elif msg.text is None:
                 return
 #==============================================================================#
-            elif msg.text in ["Key","help","Help"]:
+            elif msg.text in ["Key","Staff help","help","Help"]:
                 ka.sendText(msg.to,helpMessage)
 
             elif msg.text in ["Help creator","help creator","Creator. Man"]:
@@ -1440,8 +1450,13 @@ def bot(op):
                             kc.findAndAddContactsByMid(target)
                             kd.findAndAddContactsByMid(target)
                             ke.findAndAddContactsByMid(target)
+                            kf.findAndAddContactsByMid(target)
+                            kg.findAndAddContactsByMid(target)
+                            kh.findAndAddContactsByMid(target)
+                            ki.findAndAddContactsByMid(target)
+                            kj.findAndAddContactsByMid(target)
                             admin.append(target)
-                            ka.sendText(msg.to,"Admin Already Added Boss")
+                            ka.sendText(msg.to,"👑Admin Already Added Boss👑")
                         except:
                             pass
                 print "[Command]Admin add executed"
@@ -1469,8 +1484,13 @@ def bot(op):
                             kc.findAndAddContactsByMid(target)
                             kd.findAndAddContactsByMid(target)
                             ke.findAndAddContactsByMid(target)
+                            kf.findAndAddContactsByMid(target)
+                            kg.findAndAddContactsByMid(target)
+                            kh.findAndAddContactsByMid(target)
+                            ki.findAndAddContactsByMid(target)
+                            kj.findAndAddContactsByMid(target)
                             owner.append(target)
-                            ka.sendText(msg.to,"Owner Already Added Boss")
+                            ka.sendText(msg.to,"👑Owner Already Added Boss👑")
                         except:
                             pass
                 print "[Command]Owner add executed"
@@ -1494,7 +1514,7 @@ def bot(op):
                    for target in targets:
                         try:
                             admin.remove(target)
-                            ka.sendText(msg.to,"Admin Deleted")
+                            ka.sendText(msg.to,"Admin Deleted 👀")
                         except:
                             pass
                 print "[Command]Admin remove executed"
@@ -1518,7 +1538,7 @@ def bot(op):
                    for target in targets:
                         try:
                             owner.remove(target)
-                            ka.sendText(msg.to,"Owner Deleted")
+                            ka.sendText(msg.to,"Owner Deleted 👀")
                         except:
                             pass
                 print "[Command]Owner remove executed"
@@ -1800,17 +1820,17 @@ def bot(op):
                 else:
                     ka.sendText(msg.to, "Setting Masih Mode Off\nMohon Maaf")                         
 #==============================================================================#
-            elif msg.text in ["Status","Set"]:
+            elif msg.text in ["Status","Set","Staffset"]:
               if msg.from_ in admin:
                 md = "╔═══════════════\n║⭐Protection Status⭐\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n"
-                if wait["Protectgr"] == True: md+="║[•]Protect QR Enable\n"
-                else: md+="║[•]Protect QR Disable\n"
-                if wait["Protectcancl"] == True: md+="║[•]Protect Invite Enable\n"
-                else: md+="║[•]Protect Invite Disable\n"
-                if wait["Protectcancel"] == True: md+="║[•]Protect Cancel Enable\n"
-                else: md+="║[•]Protect Cancel Disable\n"
-                if wait["Protectjoin"] == True: md+="║[•]High protect Enable\n"
-                else: md+="║[•]High protect Disable\n"
+                if wait["Protectgr"] == True: md+="║🔒Protect QR Enable\n"
+                else: md+="║🔓Protect QR Disable\n"
+                if wait["Protectcancl"] == True: md+="║🔒Protect Invite Enable\n"
+                else: md+="║🔓Protect Invite Disable\n"
+                if wait["Protectcancel"] == True: md+="║🔒Protect Cancel Enable\n"
+                else: md+="║🔓Protect Cancel Disable\n"
+                if wait["Protectjoin"] == True: md+="║🔒High protect Enable\n"
+                else: md+="║🔓High protect Disable\n"
                 if wait["contact"] == True: md+="║[•]Contact ✔\n"
                 else: md+="║[•]Contact ✖\n"
                 if wait["autoJoin"] == True: md+="║[•]Auto Join ✔\n"
@@ -1820,7 +1840,7 @@ def bot(op):
                 if wait["timeline"] == True: md+="║[•]Share ✔\n"
                 else: md+="║[•]Share ✖\n"
                 if wait["Sambutan"] == True: md+="║[•]Sambutan ✔\n"
-                else: md+="║[•]Sambutan ✖\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n║SELFBOT_MAN_Protect\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n╚═══════════════"
+                else: md+="║[•]Sambutan ✖\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n║⚙️SELFBOT_MAN_Protect🔧🔩🔨\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n╚═══════════════"
                 ka.sendText(msg.to,md)
               else:
                 ka.sendText(msg.to,"This Command Only For Admin & Owner")
@@ -2012,7 +2032,7 @@ def bot(op):
               else:
                 ka.sendText(msg.to,"This Command Only For Admin & Owner")
 #==============================================================================#
-            elif msg.text in ["Masuk","Bot in","Kicker"]:
+            elif msg.text in ["Masuk","Bot in","Staff in"]:
               if msg.from_ in owner:
                 G = ka.getGroup(msg.to)
                 ginfo = ka.getGroup(msg.to)
@@ -2028,6 +2048,16 @@ def bot(op):
                 time.sleep(0.00001)
                 ke.acceptGroupInvitationByTicket(msg.to,Ticket)
                 time.sleep(0.00001)
+                kf.acceptGroupInvitationByTicket(msg.to,Ticket)
+                time.sleep(0.00001)
+                kg.acceptGroupInvitationByTicket(msg.to,Ticket)
+                time.sleep(0.00001)
+                kh.acceptGroupInvitationByTicket(msg.to,Ticket)
+                time.sleep(0.00001)
+                ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                time.sleep(0.00001)
+		kj.acceptGroupInvitationByTicket(msg.to,Ticket)
+                time.sleep(0.00001)
                 G = ka.getGroup(msg.to)
                 G.preventJoinByTicket = True
                 ka.updateGroup(G)
@@ -2040,7 +2070,7 @@ def bot(op):
 		except Exception as E:
 		    print E
 #==============================================================================#
-            elif msg.text in ["Keluar","Get out","Out"]:
+            elif msg.text in ["Keluar","Staff out","Out","Staff bye"]:
               if msg.from_ in owner:
                 if msg.toType == 2:
                     ginfo = ka.getGroup(msg.to)
@@ -2049,7 +2079,12 @@ def bot(op):
                         kc.leaveGroup(msg.to)
                         kd.leaveGroup(msg.to)
                         ke.leaveGroup(msg.to)
-                        ka.leaveGroup(msg.to)
+                        kf.leaveGroup(msg.to)
+			kg.leaveGroup(msg.to)
+                        kh.leaveGroup(msg.to)
+                        ki.leaveGroup(msg.to)
+                        kj.leaveGroup(msg.to)
+                        #ka.leaveGroup(msg.to)
                     except:
                         pass
 #==============================================================================#
