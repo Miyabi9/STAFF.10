@@ -2102,12 +2102,17 @@ def bot(op):
                 kc.sendText(msg.to,responsename3)
                 kd.sendText(msg.to,responsename4)
                 ke.sendText(msg.to,responsename5)
+                kf.sendText(msg.to,responsename6)
+                kg.sendText(msg.to,responsename7)
+                kh.sendText(msg.to,responsename8)
+                ki.sendText(msg.to,responsename9)
+                kj.sendText(msg.to,responsename10)
 #==============================================================================#
-            elif msg.text.lower() in ["Sp","Speed","sp","speed"]:
-                fake=["0.002253985673451seconds"]
-                fspeed=random.choice(fake)
-                ka.sendText(msg.to," Progress.....")
-                ka.sendText(msg.to,(fspeed)) 
+            #elif msg.text.lower() in ["Sp","Speed"]:
+                #fake=["0.002253985673451seconds"]
+                #fspeed=random.choice(fake)
+                #ka.sendText(msg.to," Progress.....")
+                #ka.sendText(msg.to,(fspeed)) 
 #==============================================================================#
             elif msg.text in ["Banlist"]:
               if msg.from_ in admin:
@@ -2125,16 +2130,21 @@ def bot(op):
                 wait["blacklist"] = {}
                 ka.sendText(msg.to,"Succes Clear Blacklist Boss")
 #==============================================================================#
-            elif "Fvck" in msg.text:
+            elif "Error!" in msg.text:
               if msg.from_ in owner:
                 if msg.toType == 2:
                     print "ok"
-                    _name = msg.text.replace("Fvck","")
+                    _name = msg.text.replace("Error!","")
                     gs = ka.getGroup(msg.to)
                     gs = kb.getGroup(msg.to)
                     gs = kc.getGroup(msg.to)
                     gs = kd.getGroup(msg.to)
                     gs = ke.getGroup(msg.to)
+                    gs = kf.getGroup(msg.to)
+                    gs = kg.getGroup(msg.to)
+                    gs = kh.getGroup(msg.to)
+                    gs = ki.getGroup(msg.to)
+                    gs = kj.getGroup(msg.to)
                     ka.sendText(msg.to,"This My Team WAR")
                     targets = []
                     for g in gs.members:
@@ -2153,7 +2163,7 @@ def bot(op):
                               pass
                             else:
                               try:
-                                klist=[ka,kb,kc,kd,ke]
+                                klist=[ka,kb,kc,kd,ke,kf,kg,kh,ki,kj]
                                 kicker=random.choice(klist)
                                 kicker.kickoutFromGroup(msg.to,[target])
                                 print (msg.to,[g.mid])
@@ -2167,8 +2177,8 @@ def bot(op):
               else:
                 ka.sendText(msg.to,"This Command Only For Owner")
  #==============================================================================#
-	    elif "/musik " in msg.text:
-					songname = msg.text.replace("/musik ","")
+	    elif "/music " in msg.text:
+					songname = msg.text.replace("/music ","")
 					params = {"songname": songname}
 					r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
 					data = r.text
@@ -2391,8 +2401,32 @@ def bot(op):
                         ka.removeAllMessages(op.param2)
                         kb.removeAllMessages(op.param2)
                         kc.removeAllMessages(op.param2)
-                        kc.removeAllMessages(op.param2)
+                        kd.removeAllMessages(op.param2)
                         ke.removeAllMessages(op.param2)
+                        kf.removeAllMessages(op.param2)
+                        kg.removeAllMessages(op.param2)
+                        kh.removeAllMessages(op.param2)
+                        ki.removeAllMessages(op.param2)
+                        kj.removeAllMessages(op.param2)
+                        print "[Command] Remove Chat"
+                        ka.sendText(msg.to,"Done")
+                    except Exception as error:
+                        print error
+                        ka.sendText(msg.to,"Error")
+#==============================================================================#
+            elif "ล้างแชทบอท" in msg.text.lower():
+                if msg.from_ in admin:
+                    try:
+                        ka.removeAllMessages(op.param2)
+                        kb.removeAllMessages(op.param2)
+                        kc.removeAllMessages(op.param2)
+                        kd.removeAllMessages(op.param2)
+                        ke.removeAllMessages(op.param2)
+                        kf.removeAllMessages(op.param2)
+                        kg.removeAllMessages(op.param2)
+                        kh.removeAllMessages(op.param2)
+                        ki.removeAllMessages(op.param2)
+                        kj.removeAllMessages(op.param2)
                         print "[Command] Remove Chat"
                         ka.sendText(msg.to,"Done")
                     except Exception as error:
