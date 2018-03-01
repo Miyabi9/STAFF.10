@@ -186,7 +186,7 @@ Jmid = backup.getProfile().mid
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid]
 owner=["SELFBOT_MAN_PC"]
 admin=["ud24af63fd62d14c3bf8f719df80c3745"]
-
+#=========BACKUP===≠=====
 contact = ka.getProfile()
 backup1 = ka.getProfile()
 backup1.displayName = contact.displayName
@@ -548,15 +548,15 @@ def bot(op):
                                 if " " in Name:
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
-                                        ka.sendText(op.param1, "Hai " + "[ " + Name + " ]" + "\ndo not take a peek here to chat😁   ")
+                                        ka.sendText(op.param1, "Hi " + "[ " + Name + " ]" + "\ndo not take a peek here to chat😁   ")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                     else:
-                                        ka.sendText(op.param1, "Hai " + "[ " + Name + " ]" + "\ndo not take a peek here to chat😁   ")
+                                        ka.sendText(op.param1, "Hi " + "[ " + Name + " ]" + "\ndo not take a peek here to chat😁   ")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                 else:
-                                    ka.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\ndo not take a peek here to chat😁   ")
+                                    ka.sendText(op.param1, "Hi " + "☞ " + Name + " ☜" + "\ndo not take a peek here to chat😁   ")
                                     time.sleep(0.2)
                                     summon(op.param1,[op.param2])
                         else:
@@ -709,13 +709,13 @@ def bot(op):
                   random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                 except:
                   random.choice(KAC).cancelGroupInvitation(op.param1, gMembMids)
-                  random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "\n" + "Who do you want to invite  ??? \nYou Are Not Our Admin, So We Cancel it.\nPlease Contact Admin/Owner")
+                  random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "\n" + "การเชิญสมาชิกเข้าร่วมกลุ่ม ควรแจ้งให้ทราบ..\nโดยผ่าน.. Admin group หรือลงข้อมูลสมาชิกไว้\n•Who do you want to invite  ??? \n•You Are Not Our Admin, So We Cancel it.\n•Please Contact Admin/Owner")
                   random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
 #==============================================================================#
         if op.type == 13:
           if wait["Protectcancl"] == True:
             if wait["blacklist"][op.param3] == True:
-              ka.sendText(op.param1,ka.getContact(op.param3).displayName + " On Blacklist Boss\nWe Will Cancel Invitation")
+              ka.sendText(op.param1,ka.getContact(op.param3).displayName + " On Blacklist Boss Man\n•We Will Cancel Invitation\n•by : SELFBOT_MAN_PROTECT")
               random.choice(KAC).cancelGroupInvitation(op.param1,[op.param3])
 #==============================================================================#
         if op.type == 11:
@@ -731,7 +731,7 @@ def bot(op):
                   random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "Dont Playing Link Group Bro")
                   random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                   random.choice(KAC).preventJoinByTicket = True
-                  random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "\n" + "We Enter Into Blacklist Boss")
+                  random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "\n" + "•We Enter Into Blacklist Boss Man")
                   wait["blacklist"][op.param2] = True
                   f=codecs.open('st2__b.json','w','utf-8')
                   json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
@@ -743,7 +743,7 @@ def bot(op):
             ginfo = ka.getGroup(op.param1)
             contact = ka.getContact(op.param2)
             image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-            ka.sendText(op.param1,"Hello ↪️" + ka.getContact(op.param2).displayName + "↩️\nWelcome To 🔛 " + str(ginfo.name) + " " + "\nby SELFBOT_MAN_PROTECT")
+            ka.sendText(op.param1,"•Hello ↪️" + ka.getContact(op.param2).displayName + "↩️\n•Welcome To 🔛 " + str(ginfo.name) + " " + "\n•by : SELFBOT_MAN_PROTECT")
             c = Message(to=op.param1, from_=None, text=None, contentType=13)
             c.contentMetadata={'mid':op.param2}
             ka.sendMessage(c)  
@@ -759,7 +759,7 @@ def bot(op):
         if op.type == 17: #Protect Join
           if wait["Protectjoin"] == True:
             if wait["blacklist"][op.param2] == True:
-              ka.sendText(op.param1,ka.getContact(op.param2).displayName + " On Blacklist Boss\nWe Will Kick")
+              ka.sendText(op.param1,ka.getContact(op.param2).displayName + " On Blacklist Boss Man\n•We Will Kick 👀")
               random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
 #==============================================================================#
         if op.type == 19: #Member Ke Kick
@@ -1256,7 +1256,7 @@ def bot(op):
               elif op.param2 in admin:
                 pass
               else:
-                random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + " Canceled Invitation 👀")
+                random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + " •Cancel Invitation 👀")
                 random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                 random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
                 wait["blacklist"][op.param2] = True
@@ -1376,7 +1376,7 @@ def bot(op):
                 if wait["timeline"] == True:
                     msg.contentType = 0
                     if wait["lang"] == "JP":
-                        msg.text = "post URL\n" + msg.contentMetadata["postEndUrl"]
+                        msg.text = "🔼POST link🔼 URL⤵️\n" + msg.contentMetadata["postEndUrl"]
                     else:
                         msg.text = "URLâ†’\n" + msg.contentMetadata["postEndUrl"]
                     ka.sendText(msg.to,msg.text)
@@ -1411,10 +1411,10 @@ def bot(op):
                         else:
                             sinvitee = str(len(ginfo.invitee))
                         if ginfo.preventJoinByTicket == True:
-                            u = "close"
+                            u = "Close"
                         else:
-                            u = "open"
-                        ka.sendText(msg.to,"[Group name]\n" + str(ginfo.name) + "\n\n[Gid]\n" + msg.to + "\n\n[Group creator]\n" + gCreator + "\n\n[Profile status]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\n\nMembers:" + str(len(ginfo.members)) + "members\nPending:" + sinvitee + "people\nURL:" + u + "it is inside")
+                            u = "Open"
+                        ka.sendText(msg.to,"[Group name]\n" + str(ginfo.name) + "\n\n[Gid]\n" + msg.to + "\n\n[Group creator]\n" + gCreator + "\n\n[Profile status]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\n\n•Members group : " + str(len(ginfo.members)) + " members\n•MemberInvite : " + sinvitee + " people\n•URL group : " + u + "\n•by : SELFBOT_MAN_PROTECT")
                     else:
                         ka.sendText(msg.to,"[group name]\n" + str(ginfo.name) + "\n[gid]\n" + msg.to + "\n[group creator]\n" + gCreator + "\n[profile status]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
                 else:
@@ -1424,8 +1424,7 @@ def bot(op):
                         ka.sendText(msg.to,"Not for use less than group")
             elif msg.text is None:
                 return
-#==============================================================================#
-            elif msg.text in ["Creator","Owner"]:
+","Owner"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': 'ud24af63fd62d14c3bf8f719df80c3745'}
                 ka.sendMessage(msg)
@@ -1456,7 +1455,7 @@ def bot(op):
                             ki.findAndAddContactsByMid(target)
                             kj.findAndAddContactsByMid(target)
                             admin.append(target)
-                            ka.sendText(msg.to,"👑Admin Already Added Boss👑")
+                            ka.sendText(msg.to,"👑Admin Already Added Boss Man👑")
                         except:
                             pass
                 print "[Command]Admin add executed"
@@ -1490,7 +1489,7 @@ def bot(op):
                             ki.findAndAddContactsByMid(target)
                             kj.findAndAddContactsByMid(target)
                             owner.append(target)
-                            ka.sendText(msg.to,"👑Owner Already Added Boss👑")
+                            ka.sendText(msg.to,"👑Owner Already Added Boss Man👑")
                         except:
                             pass
                 print "[Command]Owner add executed"
@@ -1553,7 +1552,7 @@ def bot(op):
                   ka.sendText(msg.to,"Tunggu...")
                   mc = "👑 Admin selfbot-man 👑\n𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n"
                   for mi_d in admin:
-                      mc += "[★]" + ka.getContact(mi_d).displayName + "\n"
+                      mc += "[🔘] " + ka.getContact(mi_d).displayName + "🔏\n"
                   ka.sendText(msg.to,mc)
                   print "[Command]Stafflist executed"
 #==============================================================================#
@@ -1564,14 +1563,14 @@ def bot(op):
                   ka.sendText(msg.to,"Tunggu...")
                   mc = "👑 Owner selfbot-man 👑\n𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n"
                   for mi_d in owner:
-                      mc += "[★]" + ka.getContact(mi_d).displayName + "\n"
+                      mc += "[🔘] " + ka.getContact(mi_d).displayName + "🔏\n"
                   ka.sendText(msg.to,mc)
                   print "[Command]Ownerlist executed"
 #==============================================================================#
             elif msg.contentType == 16:
                 if wait["Timeline"] == True:
                     msg.contentType = 0
-                    msg.text = "post URL\n" + msg.contentMetadata["postEndUrl"]
+                    msg.text = "🔘POST📬\n💌URL-timeline⤵️\n" + msg.contentMetadata["postEndUrl"]
                     random.choice(KAC).sendText(msg.to,msg.text)
 #==============================================================================#
             elif msg.text in ["List group"]:
@@ -1639,13 +1638,22 @@ def bot(op):
                           random.choice(KAC).cancelGroupInvitation(msg.to,[_mid])
                     ka.sendText(msg.to,"I pretended to cancel and canceled.")
 #==============================================================================#
+            elif msg.text in ["Cl","Cancel"]:
+              if msg.from_ in owner:
+                if msg.toType == 2:
+                    group = ka.getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.invitee]
+                    for _mid in gMembMids:
+                          random.choice(KAC).cancelGroupInvitation(msg.to,[_mid])
+                    ka.sendText(msg.to,"🌐Cancel All Group Invite🌐")
+#==============================================================================#
             elif msg.text in ["Ourl","Url on"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
                     X = ka.getGroup(msg.to)
                     X.preventJoinByTicket = False
                     ka.updateGroup(X)
-                    ka.sendText(msg.to,"Url Sudah Aktif")
+                    ka.sendText(msg.to,"🔘OPEN link-Url")
                 else:
                     ka.sendText(msg.to,"Can not be used outside the group")
 #==============================================================================#
@@ -1655,7 +1663,7 @@ def bot(op):
                     X = ka.getGroup(msg.to)
                     X.preventJoinByTicket = True
                     ka.updateGroup(X)
-                    ka.sendText(msg.to,"Url Sudah Di Nonaktifkan")
+                    ka.sendText(msg.to,"📴CLOSE link-Url")
                 else:
                     ka.sendText(msg.to,"Can not be used outside the group")
 #==============================================================================#
@@ -1663,14 +1671,14 @@ def bot(op):
               if msg.from_ in owner:
                 if wait["Protectcancel"] == True:
                   if wait["lang"] == "JP":
-                    ka.sendText(msg.to,"Berhasil mengaktifkan Cancel Invite")
+                    ka.sendText(msg.to,"🔘OPEN/PROTECT Cancel Invite")
                   else:
                     ka.sendText(msg.to,"Berhasil mengaktifkan Cancel Invite")
             elif msg.text in ["Cancelinvite off","cancelinvite off"]:
               if msg.from_ in owner:
                 if wait["Protectcancel"] == False:
                   if wait["lang"] == "JP":
-                    ka.sendText(msg.to,"Berhasil menonaktifkan Cancel Invite")
+                    ka.sendText(msg.to,"📴CLOSE/PROTECT Cancel Invite")
                   else:
                     ka.sendText(msg.to,"Berhasil menonaktifkan Cancel Invite")
 #==============================================================================#
@@ -1689,33 +1697,33 @@ def bot(op):
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan High Protect")
 #==============================================================================#
-            elif msg.text in ["Cancel on","cancel on"]:
+            elif msg.text in ["Cancel on","cancel on","ปิดเชิญ"]:
               if msg.from_ in owner:
                 if wait["Protectcancl"] == True:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil mengaktifkan Cancel")
+                        ka.sendText(msg.to,"🔘OPEN/PROTECT ระบบป้องกันเชิญถูกเปิดใช้งาน")
                     else:
                         ka.sendText(msg.to,"Berhasil mengaktifkan Cancel")
-            elif msg.text in ["Cancel off","cancel off"]:
+            elif msg.text in ["Cancel off","cancel off","เปิดเชิญ"]:
               if msg.from_ in owner:
                 if wait["Protectcancl"] == False:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil menonaktifkan Cancel")
+                        ka.sendText(msg.to,"📴CLOSE/PROTECT ระบบป้องกันเชิญถูกปิดใช้งาน")
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan Cancel")
 #==============================================================================#     
-            elif msg.text in ["Qr on","qr on"]:
+            elif msg.text in ["Qr on","qr on","ป้องกันลิงก์","ป้องกันลิ้ง"]:
               if msg.from_ in owner:
                 if wait["Protectgr"] == True:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil mengaktifkan Protect QR")
+                        ka.sendText(msg.to,"🔘OPEN/PROTECT URL:QR เปิดระบบป้องกันลิงก์กลุ่ม")
                     else:
                         ka.sendText(msg.to,"Berhasil mengaktifkan Protect QR")       
-            elif msg.text in ["Qr off","qr off"]:
+            elif msg.text in ["Qr off","qr off","ปิดป้องกันลิงก์"]:
               if msg.from_ in owner:
                 if wait["Protectgr"] == False:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil menonaktifkan Protect QR")
+                        ka.sendText(msg.to,"📴CLOSE/PROTECT URL:QR ปิดระบบป้องกันลิงก์กลุ่ม")
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan Protect QR")
 #==============================================================================#                           
@@ -1723,29 +1731,29 @@ def bot(op):
               if msg.from_ in owner:
                 if wait["contact"] == True:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil mengaktifkan Info Contact")
+                        ka.sendText(msg.to,"🔘OPEN / Info Contact")
                     else:
                         ka.sendText(msg.to,"Berhasil mengaktifkan Info Contact")
             elif msg.text in ["Contact Off","Contact off","contact off"]:
               if msg.from_ in owner:
                 if wait["contact"] == False:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil menonaktifkan Info Contact")
+                        ka.sendText(msg.to,"📴CLOSE / Info Contact")
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan Info Contact")
 #==============================================================================#
-            elif msg.text in ["Join on","Auto join on"]:
+            elif msg.text in ["Join on","Autojoin on","เปิดเข้ากลุ่ม"]:
               if msg.from_ in owner:
                 if wait["autoJoin"] == True:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil mengaktifkan Auto Join")
+                        ka.sendText(msg.to,"🔘OPEN Auto Join เข้าร่วมกลุ่มเชิญออโต้")
                     else:
                         ka.sendText(msg.to,"Berhasil mengaktifkan Auto Join")
-            elif msg.text in ["Join off","Auto join off"]:
+            elif msg.text in ["Join off","Autojoin off","ปิดเข้ากลุ่ม"]:
               if msg.from_ in owner:
                 if wait["autoJoin"] == False:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil menonaktifkan Auto Join")
+                        ka.sendText(msg.to,"📴CLOSE Auto Join ปิดเข้าร่วมกลุ่มเชิญ")
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan Auto Join")
 #==============================================================================#
@@ -1753,51 +1761,51 @@ def bot(op):
               if msg.from_ in owner:
                 if wait["leaveRoom"] == True:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil mengaktifkan Auto Leave")
+                        ka.sendText(msg.to,"🔘OPEN Auto Leave เปิดป้องกันการดึงแชทรวม")
                     else:
                         ka.sendText(msg.to,"Berhasil mengaktifkan Auto Leave")
-            elif msg.text in ["Leave off","Auto leave:off"]:
+            elif msg.text in ["Leave off","Autoleave off"]:
               if msg.from_ in owner:
                 if wait["leaveRoom"] == False:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil menonaktifkan Auto Leave")
+                        ka.sendText(msg.to,"📴CLOSE Auto Leave ปิดป้องกันการดึงแชทรวม")
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan Auto Leave")
 #==============================================================================#
-            elif msg.text in ["Share on","Share on"]:
+            elif msg.text in ["Share on","Share:on"]:
               if msg.from_ in owner:
                 if wait["timeline"] == True:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil mengaktifkan Mode Share")
+                        ka.sendText(msg.to,"🔘OPEN Mode Share")
                     else:
                         ka.sendText(msg.to,"Berhasil mengaktifkan Mode Share")
-            elif msg.text in ["Share off","Share off"]:
+            elif msg.text in ["Share off","Share:off"]:
               if msg.from_ in owner:
                 if wait["timeline"] == False:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil menonaktifkan Mode Share")
+                        ka.sendText(msg.to,"📴CLOSE Mode Share")
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan Mode Share")
 #==============================================================================#
-            elif msg.text in ["Sambutan on"]:
+            elif msg.text in ["Sambutan on","Sam:on","เปิดแท๊ก"]:
               if msg.from_ in owner:
                 if wait["Sambutan"] == True:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil mengaktifkan Sambutan")
-            elif msg.text in ["Sambutan off"]:
+                        ka.sendText(msg.to,"🔘OPEN เปิดการทำงานตอบโต้แท๊ก")
+            elif msg.text in ["Sambutan off","Sam:off","ปิดแท๊ก"]:
               if msg.from_ in owner:
                 if wait["Sambutan"] == False:
                     if wait["lang"] == "JP":
-                        ka.sendText(msg.to,"Berhasil menonaktifkan Sambutan")
-#==============================================================================#            
-            elif msg.text in ["Simisimi on","Simisimi:on"]:
+                        ka.sendText(msg.to,"📴CLOSE ปิดการทำงานตอบโต้แท๊ก")
+#==============================================================================#
+            elif msg.text in ["Simisimi on","Simisimi:on","Chatbot:on"]:
                 settings["simiSimi"][msg.to] = True
                 wait["Simi"] = True
-                ka.sendText(msg.to," Berhasil mengaktifkan Simisimi")
-            elif msg.text in ["Simisimi off","Simisimi:off"]:
+                ka.sendText(msg.to,"🔘OPEN เปิดการสนทนา")
+            elif msg.text in ["Simisimi off","Simisimi:off","Chatbot:off"]:
                 settings["simiSimi"][msg.to] = False
                 wait["Simi"] = False
-                ka.sendText(msg.to,"Berhasil menonaktifkan Simisimi")
+                ka.sendText(msg.to,"📴CLOSE ปิดการสนทนา")
 #==============================================================================#
             elif "Sider on" in msg.text:
                 try:
@@ -1831,16 +1839,16 @@ def bot(op):
                 else: md+="║🔓Protect Cancel Disable\n"
                 if wait["Protectjoin"] == True: md+="║🔒High protect Enable\n"
                 else: md+="║🔓High protect Disable\n"
-                if wait["contact"] == True: md+="║[•]Contact ✔\n"
-                else: md+="║[•]Contact ✖\n"
-                if wait["autoJoin"] == True: md+="║[•]Auto Join ✔\n"
-                else: md +="║[•]Auto Join ✖\n"
-                if wait["leaveRoom"] == True: md+="║[•]Auto Leave ✔\n"
-                else: md+="║[•]Auto Leave ✖\n"
-                if wait["timeline"] == True: md+="║[•]Share ✔\n"
-                else: md+="║[•]Share ✖\n"
-                if wait["Sambutan"] == True: md+="║[•]Sambutan ✔\n"
-                else: md+="║[•]Sambutan ✖\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n║⚙️SELFBOT_MAN_Protect🔧🔩🔨\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n╚═══════════════"
+                if wait["contact"] == True: md+="║🔘Contact ✔\n"
+                else: md+="║🔘Contact ✖\n"
+                if wait["autoJoin"] == True: md+="║🔘Auto Join ✔\n"
+                else: md+="║🔘Auto Join ✖\n"
+                if wait["leaveRoom"] == True: md+="║🔘Auto Leave ✔\n"
+                else: md+="║🔘Auto Leave ✖\n"
+                if wait["timeline"] == True: md+="║🔘Share ✔\n"
+                else: md+="║🔘Share ✖\n"
+                if wait["Sambutan"] == True: md+="║🔘Sambutan ✔\n"
+                else: md+="║🔘Sambutan ✖\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n║⚙️SELFBOT_MAN_SETTING🔧🔩🔨\n║𖤓≛≛≛≛≛≛≛≛≛≛≛≛≛≛≛𖤓\n╚═══════════════"
                 ka.sendText(msg.to,md)
               else:
                 ka.sendText(msg.to,"This Command Only For Admin & Owner")
@@ -2015,7 +2023,7 @@ def bot(op):
                     else:
                         ka.sendText(msg.to, "Lurking has not been set.")
 #==============================================================================#     
-            elif msg.text in ["Gurl"]:
+            elif msg.text in ["Gurl","Url","ลิงก์กลุ่ม"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
                     x = ka.getGroup(msg.to)
@@ -2087,6 +2095,15 @@ def bot(op):
                         #ka.leaveGroup(msg.to)
                     except:
                         pass
+#===============================================================================#
+            elif msg.text in ["@bye"]:
+              if msg.from_ in owner:
+                if msg.toType == 2:
+                    ginfo = ka.getGroup(msg.to)
+                    try:
+                        ka.leaveGroup(msg.to)
+                    except:
+                        Pass
 #==============================================================================#
             elif msg.text in ["Absen"]:
               if msg.from_ in admin:
@@ -2114,21 +2131,21 @@ def bot(op):
                 #ka.sendText(msg.to," Progress.....")
                 #ka.sendText(msg.to,(fspeed)) 
 #==============================================================================#
-            elif msg.text in ["Banlist"]:
+            elif msg.text in ["Banlist","บัญชีดำ"]:
               if msg.from_ in admin:
                 if wait["blacklist"] == {}:
                     ka.sendText(msg.to,"Nothing Banned User")
                 else:
-                    ka.sendText(msg.to,"Blacklist user")
+                    ka.sendText(msg.to,"💂ศาล💹เบิกตัว📚\n🔘จำเลย ผู้กระทำความผิด ขึ้นบัญชีดำ⤵️")
                     mc = ""
                     for mi_d in wait["blacklist"]:
-                        mc += "→" +ka.getContact(mi_d).displayName + "\n"
+                        mc += "👤" +ka.getContact(mi_d).displayName + " 👀รอลงอาญา\n"
                     ka.sendText(msg.to,mc)
 #==============================================================================#
-            elif msg.text in ["Clear ban","Cb"]:
+            elif msg.text in ["Clear ban","Cb","ล้างดำ"]:
               if msg.from_ in owner:
                 wait["blacklist"] = {}
-                ka.sendText(msg.to,"Succes Clear Blacklist Boss")
+                ka.sendText(msg.to,"💀Clear Blacklist Boss Man💀")
 #==============================================================================#
             elif "Error!" in msg.text:
               if msg.from_ in owner:
@@ -2185,7 +2202,7 @@ def bot(op):
 					data = json.loads(data)
 					for song in data:
 						abc = song[3].replace('https://','http://')
-						ka.sendText(msg.to, "Title : " + song[0] + "\nLength : " + song[1] + "\nLink download : " + song[4])
+						ka.sendText(msg.to, "🔘Title : " + song[0] + "\n🔘Length : " + song[1] + "\n🔘Link download : " + song[4])
 						ka.sendText(msg.to, "Lagu " + song[0] + "\nSedang Di Prosses... Tunggu Sebentar ^_^ ")
 						ka.sendAudioWithURL(msg.to,abc)
 						ka.sendText(msg.to, "Selamat Mendengarkan Lagu " + song[0])
@@ -2240,7 +2257,20 @@ def bot(op):
                     results = soup.find(attrs={'class':'yt-uix-tile-link'})
                     ka.sendText(msg.to,'https://www.youtube.com' + results['href'])
                 except:
-                    ka.sendText(msg.to,"Could not find it")
+                    ka.sendText(msg.to,"🔘กรุณาใช้คำศัพท์ที่ถูกต้องและทำการค้นหาอีกครั้ง")
+#==============================================================================#
+            elif '/yt: ' in msg.text:
+                try:
+                    textToSearch = (msg.text).replace('Youtube ', "").strip()
+                    query = urllib.quote(textToSearch)
+                    url = "https://www.youtube.com/results?search_query=" + query
+                    response = urllib2.urlopen(url)
+                    html = response.read()
+                    soup = BeautifulSoup(html, "html.parser")
+                    results = soup.find(attrs={'class':'yt-uix-tile-link'})
+                    ka.sendText(msg.to,'https://www.youtube.com' + results['href'])
+                except:
+                    ka.sendText(msg.to,"🔘กรุณาใช้คำศัพท์ที่ถูกต้องและทำการค้นหาอีกครั้ง")
 #==============================================================================#
             elif "Say-id " in msg.text:
                 say = msg.text.replace("Say-id ","")
@@ -2274,8 +2304,14 @@ def bot(op):
             elif "playstore " in msg.text.lower():
                 tob = msg.text.lower().replace("playstore ","")
                 ka.sendText(msg.to,"Sedang Mencari...")
-                ka.sendText(msg.to,"Title : "+tob+"\nSource : Google Play\nLink : https://play.google.com/store/search?q=" + tob)
-                ka.sendText(msg.to,"Tuh Linknya Kak (^_^)")
+                ka.sendText(msg.to,"🔘Title : "+tob+"\n🔘Source : Google Play\n🔘Link download : https://play.google.com/store/search?q=" + tob)
+                ka.sendText(msg.to,"🔘by : SELFBOT MAN MEDIA @2018")
+#==============================================================================#
+            elif "/เพลสโตร์:" in msg.text.lower():
+                tob = msg.text.lower().replace("/เพลสโตร์:","")
+                ka.sendText(msg.to,"Playstore...")
+                ka.sendText(msg.to,"🔘Title : "+tob+"\n🔘Source : Google Play\n🔘Link download : https://play.google.com/store/search?q=" + tob)
+                ka.sendText(msg.to,"🔘by : SELFBOT MAN MEDIA @2018")
 #==============================================================================#
             elif msg.text.lower() in ["me"]:
                 msg.contentType = 13
@@ -2340,6 +2376,19 @@ def bot(op):
                 except:
                     pass
 #==============================================================================#
+            elif "/รูปภาพ:" in msg.text:
+                search = msg.text.replace("/รูปภาพ:","")
+                url = 'https://www.google.com/search?espv=2&biw=1366&bih=667&tbm=isch&oq=kuc&aqs=mobile-gws-lite.0.0l5&q=' + search
+                raw_html = (download_page(url))
+                items = []
+                items = items + (_images_get_all_items(raw_html))
+                path = random.choice(items)
+                print path
+                try:
+                    ka.sendImageWithURL(msg.to,path)
+                except:
+                    pass
+#==============================================================================#
             elif "Tr-id " in msg.text:
                 isi = msg.text.replace("Tr-id ","")
                 translator = Translator()
@@ -2388,8 +2437,20 @@ def bot(op):
                 van = "Bot Sudah Berjalan Selama :\n"+waktu(eltime)
                 ka.sendText(msg.to,van)
 #==============================================================================#
+            elif msg.text.lower() == '/เช็คเวลา':
+                eltime = time.time() - mulai
+                van = "🔘ระยะเวลาการทำงานของบอท:⤵️\n"+waktu(eltime)
+                ka.sendText(msg.to,van)
+#==============================================================================#
             elif "SearchID: " in msg.text:
                 userid = msg.text.replace("SearchID: ","")
+                contact = ka.findContactsByUserid(userid)
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': contact.mid}
+                ka.sendMessage(msg)
+#==============================================================================#
+            elif "LineID: " in msg.text:
+                userid = msg.text.replace("LineID: ","")
                 contact = ka.findContactsByUserid(userid)
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': contact.mid}
@@ -2414,7 +2475,7 @@ def bot(op):
                         print error
                         ka.sendText(msg.to,"Error")
 #==============================================================================#
-            elif "ล้างแชทบอท" in msg.text.lower():
+            elif "/ล้างแชทบอท" in msg.text.lower():
                 if msg.from_ in admin:
                     try:
                         ka.removeAllMessages(op.param2)
@@ -2428,7 +2489,7 @@ def bot(op):
                         ki.removeAllMessages(op.param2)
                         kj.removeAllMessages(op.param2)
                         print "[Command] Remove Chat"
-                        ka.sendText(msg.to,"Done")
+                        ka.sendText(msg.to,"🔘ลบข้อมูลแชทบอทเรียบร้อย")
                     except Exception as error:
                         print error
                         ka.sendText(msg.to,"Error")
