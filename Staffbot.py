@@ -512,7 +512,85 @@ def sendAudioWithUrl(self, to_, url):
             self.sendAudio(to_, path)
         except Exception as e:
             raise e
-            
+
+def sendVideo(self, to_, path):
+        M = Message(to=to_,contentType = 2)
+        M.contentMetadata = {
+              'VIDLEN' : '0',
+              'DURATION' : '0'
+        }
+        M.contentPreview = None
+        M_id = self.Talk.client.sendMessage(0,M).id
+        files = {
+            'file': open(path, 'rb'),
+        }
+        params = {
+            'name': 'media',
+            'oid': M_id,
+            'size': len(open(path, 'rb').read()),
+            'type': 'video',
+            'ver': '1.0',
+        }
+        data = {
+            'params': json.dumps(params)
+        }
+        r = self.post_content('https://os.line.naver.jp/talk/m/upload.nhn', data=data, files=files)
+        if r.status_code != 201:
+            raise Exception('Upload image failure.')
+        return True
+
+def sendVideoWithURL(self, to_, url):
+        path = 'pythonLines.data'
+        r = requests.get(url, stream=True)
+        if r.status_code == 200:
+            with open(path, 'w') as f:
+               shutil.copyfileobj(r.raw, f)
+        else:
+            raise Exception('Download Audio failure.')
+        try:
+            self.sendVideo(to_, path)
+        except Exception as e:
+            raise e
+
+def sendGif(self, to_, path):
+      M = Message(to=to_,contentType = 1)
+      M.contentMetadata = {
+           'VIDLEN' : '0',
+           'DURATION' : '0'
+       }
+      M.contentPreview = None
+      M_id = self.Talk.client.sendMessage(0,M).id
+      files = {
+         'file': open(path, 'rb'),
+      }
+      params = {
+         'name': 'media',
+         'oid': M_id,
+         'size': len(open(path, 'rb').read()),
+         'type': 'image',
+         'ver': '1.0',
+      }
+      data = {
+         'params': json.dumps(params)
+      }
+      r = self.post_content('https://os.line.naver.jp/talk/m/upload.nhn', data=data, files=files)
+      if r.status_code != 201:
+         raise Exception('Upload Gif failure.')
+      return True
+
+def sendGifWithURL(self, to_, url):
+      path = 'pythonLiness.data'
+      r = requests.get(url, stream=True)
+      if r.status_code == 200:
+         with open(path, 'w') as f:
+            shutil.copyfileobj(r.raw, f)
+      else:
+         raise Exception('Download Gif failure.')
+      try:
+         self.sendGif(to_, path)
+      except Exception as e:
+         raise e 
+
 def downloadFileWithURL(self, fileUrl):
         saveAs = '%s/pythonLine-%i.data' % (tempfile.gettempdir(), randint(0, 9))
         r = self.get_content(fileUrl)
