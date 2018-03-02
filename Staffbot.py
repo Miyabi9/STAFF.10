@@ -68,6 +68,14 @@ helpMessage ="""Thailand : SELFBOT_MAN_PC
  ║͜͡☆➣ คำสั่ง-> 「Man:media」
  ╰══════════╬♠️╬══════════╯
  ╭══════════╬♥╬══════════╮
+ ║ ♨️ติดตั้งชุดระบบป้องกัน[Protect]♨️
+ ║ ลงคำสั่ง ครั้งเดียว ระบบทำงานยกเชุด
+ ║•คำสั่ง..  Allprotect on
+ ║•คำสั่ง..  Allprotect off
+ ║•คำสั่ง..  เปิดระบบป้องกัน
+ ║•คำสั่ง..  ปิดระบบป้องกัน
+ ╰══════════╬💀╬══════════╯
+ ╭══════════╬♥╬══════════╮
  ║ ♨️รับทำเชลบอท [SELFBOT] กันรัน
  ║•รับทำ..[ชุดบอทป้องกัน+Protect+]
  ║•รับทำ..[ชุดบอทส่วนตัว+Kicker+]
@@ -152,7 +160,7 @@ mediaMessage ="""HELP_media
  ╭═════════╬♥╬═════════╮
  ║͜͡☆➣ /music
  ║͜͡☆➣ /lirik
- ║͜͡☆➣ /ig  Ig:
+ ║͜͡☆➣ /ig  Instagrams
  ║͜͡☆➣ /yt: Youtubelink:
  ║͜͡☆➣ Say-id
  ║͜͡☆➣ Say-en
@@ -167,8 +175,8 @@ mediaMessage ="""HELP_media
  ║͜͡☆➣ Runtime
  ║͜͡☆➣ Tr-en  แปลภาษา
  ║͜͡☆➣ Tr-id  แปลภาษา
- ║͜͡☆➣ En@id  แปลภาษา
- ║͜͡☆➣ Id@en  แปลภาษา
+ ║͜͡☆➣ En@id อังกฤษ-อินโด
+ ║͜͡☆➣ Id@en อินโด-อังกฤษ
  ║͜͡☆➣ SearchID:ใส่ใอดีไลน์
  ║͜͡☆➣ LineID:ใส่ใอดีไลน์
  ║͜͡☆➣ /เพลสโตร์:
@@ -1818,7 +1826,7 @@ def bot(op):
                     else:
                         ka.sendText(msg.to,"Berhasil menonaktifkan Cancel")
 #==============================================================================#     
-            elif msg.text in ["Qr on","qr on","ป้องกันลิงก์","ป้องกันลิ้ง"]:
+            elif msg.text in ["Qr on","qr on","เปิดป้องกันลิงก์","ป้องกันลิ้ง"]:
               if msg.from_ in owner:
                 if wait["Protectgr"] == True:
                     if wait["lang"] == "JP":
@@ -1932,7 +1940,69 @@ def bot(op):
                     wait["Sider"] = False
                     ka.sendText(msg.to, "Berhasil menonaktifkan Sider point")
                 else:
-                    ka.sendText(msg.to, "Setting Masih Mode Off\nMohon Maaf")                         
+                    ka.sendText(msg.to, "Setting Masih Mode Off\nMohon Maaf") 
+#--------------------------------
+            elif msg.text in ["Allprotect on","เปิดชุดป้องกัน"]:
+		if msg.from_ in admin:                    wait["Protectcancel"] = True
+                    wait["Protectcancl"] = True                   
+                    wait["Protectjoin"] = True
+                    wait["Protectgr"] = True
+                    wait["Protection"] = True                     
+                    ka.sendText(msg.to,"🔘OPEN/PROTECT ระบบป้องกันถูกเปิดใช้งาน")
+		else:
+		    ka.sendText(msg.to,"TEAM STAFF.BOT MAN ON")
+
+		if msg.from_ in admin:
+                    wait["Protectcancel"] = False
+                    wait["Protectcancl"] = False                    
+                    wait["Protectjoin"] = False
+                    wait["Protectgr"] = False
+                    wait["Protection"] = False                    
+                    ka.sendText(msg.to,"📴CLOSE/PROTECT ระบบป้องกันถูกเปิดใช้งาน")
+		else:
+		    ka.sendText(msg.to,"TEAM STAFFBOT MAN OFF PROTECTION")
+#========================[ P R O T E C T I O N : A L L ]========================#
+            elif msg.text in ["ProtectALL on","เปิดระบบป้องกัน"]:
+		if msg.from_ in admin:
+                    wait["Protectcancel"] = True
+                    wait["Protectcancl"] = True                   
+                    wait["Protectjoin"] = True
+                    wait["Protectgr"] = True
+                    wait["Protection"] = True                     
+                    ka.sendText(msg.to,"🔘OPEN/PROTECT ระบบป้องกันถูกเปิดใช้งาน")
+		else:
+		    ka.sendText(msg.to,"TEAM STAFF.BOT MAN ON")
+            elif msg.text in ["ProtectALL off","ปิดระบบป้องกัน"]:
+		if msg.from_ in admin:
+                    wait["Protectcancel"] = False
+                    wait["Protectcancl"] = False                    
+                    wait["Protectjoin"] = False
+                    wait["Protectgr"] = False
+                    wait["Protection"] = False                    
+                    ka.sendText(msg.to,"📴CLOSE/PROTECT ระบบป้องกันถูกเปิดใช้งาน")
+		else:
+		    ka.sendText(msg.to,"TEAM STAFFBOT MAN OFF PROTECTION")
+#==============================[ S E T : T I N G ]==============================#
+            elif msg.text in ["Allprotect on","เปิดระบบป้องกัน"]:
+		if msg.from_ in admin:
+                    wait["contact"] = True
+                    wait["Auvv   "] = True                   
+                    wait["Protectjoin"] = True
+                    wait["Protectgr"] = True
+                    wait["Protection"] = True                     
+                    ka.sendText(msg.to,"🔘OPEN/PROTECT ระบบป้องกันถูกเปิดใช้งาน")
+		else:
+		    ka.sendText(msg.to,"TEAM STAFF.BOT MAN ON")
+            elif msg.text in ["Allprotect oft","ปิดระบบป้องกัน"]:
+		if msg.from_ in admin:
+                    wait["Protectcancel"] = False
+                    wait["Protectcancl"] = False                    
+                    wait["Protectjoin"] = False
+                    wait["Protectgr"] = False
+                    wait["Protection"] = False                    
+                    ka.sendText(msg.to,"📴CLOSE/PROTECT ระบบป้องกันถูกเปิดใช้งาน")
+		else:
+		    ka.sendText(msg.to,"TEAM STAFFBOT MAN OFF PROTECTION")
 #==============================================================================#
             elif msg.text in ["Status","Set","Staffset"]:
               if msg.from_ in admin:
